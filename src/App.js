@@ -5,12 +5,12 @@ function App() {
 
   const [result, setResult] = useState();
   const [text, setText] = useState("");
-  const [isInput,setisInput] = useState(false);
+  
 
   const click = (e) => {
     console.log(text.length);
     console.log(e.target.value);
-    setisInput(true);
+    
     setText(text + e.target.value);
   }
 
@@ -24,7 +24,6 @@ function App() {
 
   const clear = () => {
     //console.log(text.length);
-    setisInput(true);
     setResult("");
     setText("");
     console.log(text.length);
@@ -37,14 +36,9 @@ function App() {
     <div className="container">
       <h1>React Calculator</h1>
       <input type='text' value={text} />
-      {isInput
-      ?
-      (<div>
+      <div>
         <p>{result}</p>
-      </div>)
-      :(<></>)
-      }
-      <br/>
+      </div>
       <div>
         <div>
           <button className="button" value="7" onClick={click}>7</button>
