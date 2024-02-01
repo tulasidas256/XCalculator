@@ -5,16 +5,18 @@ function App() {
 
   const [result, setResult] = useState();
   const [text, setText] = useState("");
+  const [show, setShow] = useState(false);
   
 
   const click = (e) => {
-    console.log(text.length);
+    console.log(text);
     console.log(e.target.value);
     
     setText(text + e.target.value);
   }
 
   const calculate = () => {
+    setShow(true);
     if (text.length < 1) {
       setResult("Error");
     } else {
@@ -23,20 +25,18 @@ function App() {
   }
 
   const clear = () => {
-    //console.log(text.length);
+    setShow(false);
     setResult("");
     setText("");
-    console.log(text.length);
   }
 
-  useEffect(()=>{console.log("render =>",text)},[result]);
 
   return (
     <div className="container">
       <h1>React Calculator</h1>
       <input type='text' value={text} />
       <br/>
-      <div>{result}</div>
+      {show?(<div>{result}</div>):(Error)}
       <br/>
       <div>
         <div>
