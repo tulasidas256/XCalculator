@@ -36,9 +36,9 @@ function App() {
     <div className="container">
       <h1>React Calculator</h1>
       <input type='text' value={text} />
-      <div>
-        <p>{result}</p>
-      </div>
+      <br/>
+      <div>{result}</div>
+      <br/>
       <div>
         <div>
           <button className="button" value="7" onClick={click}>7</button>
