@@ -36,7 +36,7 @@ function App() {
       <h1>React Calculator</h1>
       <input type='text' value={text} />
       <br/>
-      {show?(<div>{result}</div>):(Error)}
+      {show?(<div>{result}</div>):<></>}
       <br/>
       <div>
         <div>
