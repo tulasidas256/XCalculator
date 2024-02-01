@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import './App.css';
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
     console.log(text.length);
   }
 
+  useEffect(()=>{console.log("render =>",text)},[result]);
 
   return (
     <div className="container">
