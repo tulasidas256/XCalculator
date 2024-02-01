@@ -5,9 +5,12 @@ function App() {
 
   const [result, setResult] = useState();
   const [text, setText] = useState("");
+  const [isInput,setisInput] = useState(false);
 
   const click = (e) => {
+    console.log(text.length);
     console.log(e.target.value);
+    setisInput(true);
     setText(text + e.target.value);
   }
 
@@ -20,10 +23,11 @@ function App() {
   }
 
   const clear = () => {
-    console.log(text);
+    //console.log(text.length);
+    setisInput(true);
     setResult("");
     setText("");
-    console.log(text);
+    console.log(text.length);
   }
 
   useEffect(()=>{console.log("render =>",text)},[result]);
@@ -33,9 +37,14 @@ function App() {
     <div className="container">
       <h1>React Calculator</h1>
       <input type='text' value={text} />
-      <div>
+      {isInput
+      ?
+      (<div>
         <p>{result}</p>
-      </div>
+      </div>)
+      :(<></>)
+      }
+      <br/>
       <div>
         <div>
           <button className="button" value="7" onClick={click}>7</button>

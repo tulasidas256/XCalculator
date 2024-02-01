@@ -1,0 +1,15 @@
+
+cd ~/workspace/tulasidasnayak68-ME_FE_BUILDOUT_XCALCULATOR
+
+chmod +x run_assessment.sh
+
+./run_assessment.sh
+
+
+{text.length >= 1
+      ?
+      (<div>
+        <p>{result}</p>
+      </div>)
+      : {}
+      }
