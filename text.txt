@@ -16,3 +16,4 @@ chmod +x run_assessment.sh
 const [isInput,setisInput] = useState(false);
 setisInput(true);
 setisInput(true);
+useEffect(()=>{console.log("render =>",text)},[result]);

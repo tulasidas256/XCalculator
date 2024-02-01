@@ -29,8 +29,6 @@ function App() {
     console.log(text.length);
   }
 
-  useEffect(()=>{console.log("render =>",text)},[result]);
-
 
   return (
     <div className="container">
