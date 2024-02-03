@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useState } from "react";
 import './App.css';
 
 function App() {
@@ -7,14 +7,12 @@ function App() {
   const [text, setText] = useState("");
   const [show, setShow] = useState(false);
   
-
+  // function for button click
   const click = (e) => {
-    console.log(text);
-    console.log(e.target.value);
-    
     setText(text + e.target.value);
   }
 
+  // function for calculation
   const calculate = () => {
     setShow(true);
     if (text.length < 1) {
@@ -24,6 +22,7 @@ function App() {
     }
   }
 
+  // function for clear all the inputs
   const clear = () => {
     setShow(false);
     setResult("");
