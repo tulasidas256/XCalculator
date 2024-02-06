@@ -6,7 +6,7 @@ function App() {
   const [result, setResult] = useState();
   const [text, setText] = useState("");
   const [show, setShow] = useState(false);
-  
+
   // function for button click
   const click = (e) => {
     setText(text + e.target.value);
@@ -35,7 +35,10 @@ function App() {
       <h1>React Calculator</h1>
       <input type='text' value={text} />
       <br/>
-      {show?(<div>{result}</div>):<></>}
+        {show ?
+          (<div>{result}</div>)
+          :
+          <></>}
       <br/>
       <div>
         <div>
@@ -57,7 +60,7 @@ function App() {
           <button className="button" value="*" onClick={click}>*</button>
         </div>
         <div>
-          <button className="button" onClick={clear}>c</button>
+          <button className="button" onClick={clear}>C</button>
           <button className="button" value="0" onClick={click}>0</button>
           <button className="button" onClick={calculate} >=</button>
           <button className="button" value="/" onClick={click}>/</button>
