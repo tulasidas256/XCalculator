@@ -13,8 +13,3 @@ chmod +x run_assessment.sh
       </div>)
       : {}
       }
-const [isInput,setisInput] = useState(false);
-setisInput(true);
-setisInput(true);
-useEffect(()=>{console.log("render =>",text)},[result]);
-https://mr5gft.csb.app/
